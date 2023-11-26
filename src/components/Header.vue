@@ -16,7 +16,6 @@ export default {
 </script>
 
 <style scoped>
-
 .header {
     padding-top: .5em;
     padding-bottom: .5em;

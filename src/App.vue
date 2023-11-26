@@ -158,4 +158,32 @@ Applies when the browser's width is 1000px wide or wider:
     margin-top: 2px;
     margin-bottom: 2px;
 }
+
+@media (min-width: 1000px) {
+    .header,
+    .nav {
+        display: flex;
+    }
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 1000px) {
+    .header,
+    .nav {
+        display: flex;
+    }
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+    a {
+        margin-left: 0px;
+    }
+    .logo {
+        margin-right: 0px;
+    }
+}
 </style>

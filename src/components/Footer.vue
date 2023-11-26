@@ -2,10 +2,10 @@
 <footer class="footer">
         <ul>
             <li>
-                <a href="https://ois2.ut.ee/">Don't trust the other guy</a>
+                <p>© Copyright group w 2023</p>
             </li>
             <li>
-                <a href="https://www.youtube.com/watch?v=3X-iqFRGqbc">Click on me</a>
+                <p>Contact support: groupw@support.com</p>
             </li>
         </ul>
     </footer>
