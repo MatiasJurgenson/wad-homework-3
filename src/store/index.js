@@ -26,7 +26,20 @@ export default createStore({
       if (post) {
         post.likes += 1;
       }
-    }
+    }, 
+
+    setZeroMut: state => {
+      state.Posts.forEach(post => {
+        post.likes = 0;
+      })
+    },
+
+    IncreaseLike2Mut: state => {
+      console.log("2mutation")
+      state.Posts.forEach(post => {
+        post.likes += 1;
+      })
+    }, 
   },
   actions: {
     IncreaseLikeAct: (act, postId) => {
@@ -36,8 +49,29 @@ export default createStore({
       setTimeout(function() {
         act.commit("IncreaseLikeMut", postId)
       }, 1000)
+    },
+
+    setZeroAct: act => {
+      setTimeout(function() {
+        act.commit("setZeroMut")
+    }, 1000)
+    },
+
+    testAct: act => {
+      console.log("testAct")
+    },
+
+    IncreaseLike2Act: act => {
+      console.log("2act")
+
+      setTimeout(function() {
+        act.commit("IncreaseLike2Mut")
+      }, 1000)
     }
-  },
+  }, 
+
+
+
   modules: {
   }
 })

@@ -5,8 +5,13 @@
   <section class="flex-container">
         <div class="sides"></div>
 
-          <Posts></Posts>
-           <!-- <button v-on:click="IncreaseLike"> Increase price </button> -->
+           <div> 
+            <Posts></Posts>
+
+          
+            <button id="setZeroButton" v-on:click="setZero"> Reset Likes </button>
+          </div>
+           
 
         <div class="sides"></div>
     </section>
@@ -29,13 +34,24 @@ export default {
   },
   methods:{
 
+setZero: function() {
+    this.$store.dispatch("setZeroAct")
+    }
 }
 }
 
 
 </script>
 
+
+
 <style scoped>
+
+#setZeroButton {
+    margin:0 auto;
+    display:block;
+}
+
 @media (min-width: 1000px) {
     .header,
     .nav {

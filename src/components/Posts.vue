@@ -12,7 +12,7 @@
             <p> {{ post.text }} </p>
             <span> Likes: {{post.likes}} </span>
             <a>
-                <img class="logoimage" src="@/assets/thumbs-up.png" v-on:click="IncreaseLike(post.id)">
+                <img class="logoimage" src="@/assets/thumbs-up.png" v-on:click="IncreaseLike2">
             </a>
         </div>
     </div>
@@ -38,7 +38,13 @@ methods: {
   IncreaseLike: (postID) => {
     console.log("method")
     console.log(postID)
-    this.$store.dispatch("IncreaseLikeAct", postID)
+    this.$store.dispatch("TestAct")
+   // this.$store.dispatch("IncreaseLikeAct", postID)
+  }, 
+
+  IncreaseLike2: function () {
+    console.log("2method")
+    this.$store.dispatch("IncreaseLike2Act")
   }
 }
 }
