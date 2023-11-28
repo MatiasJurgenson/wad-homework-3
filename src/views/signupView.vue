@@ -1,8 +1,6 @@
-<template class="signupmain">
-  <div class="container">
-    <Header></Header>
-    <Signup></Signup>
-  </div>
+<template>
+  <Header></Header>
+  <Signup></Signup>
   <Footer></Footer>
 </template>
 
@@ -20,8 +18,5 @@ export default {
 </script>
 
 <style scoped>
-  .container {
-    height: 100vh;
-    margin: 0px;
-  }
+
 </style>
