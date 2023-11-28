@@ -18,5 +18,15 @@ export default {
 </script>
 
 <style scoped>
-
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  @media (max-width: 1000px) {
+    .footer {
+      position: relative;
+      padding-bottom: 10vh;
+    }    
+  }
 </style>
