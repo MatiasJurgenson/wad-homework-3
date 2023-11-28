@@ -23,9 +23,8 @@ export default createStore({
     IncreaseLikeMut: (state, postId) => {
       console.log("mutation")
       const post = state.Posts.find(p => p.id === postId)
-      if (post) {
-        post.likes += 1;
-      }
+      post.likes += 1;
+      
     }, 
 
     setZeroMut: state => {
