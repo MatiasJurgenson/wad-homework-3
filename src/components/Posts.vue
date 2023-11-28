@@ -62,6 +62,7 @@ methods: {
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0);
     transition: box-shadow 0.4s ease, transform 0.3s ease;
     z-index: 2;
+    padding: 10px;
 }
 
 .post:hover {

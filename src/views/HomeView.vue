@@ -5,12 +5,12 @@
   <section class="flex-container">
         <div class="sides"></div>
 
-           <div> 
-            <Posts></Posts>
+            <div class="postcolumn"> 
+                <Posts></Posts>
 
-          
-            <button id="setZeroButton" v-on:click="setZero"> Reset Likes </button>
-          </div>
+            
+                <button id="setZeroButton" v-on:click="setZero"> Reset Likes </button>
+            </div>
            
 
         <div class="sides"></div>
@@ -110,6 +110,11 @@ section {
     border-radius: 5px;
     
     
+}
+
+.postcolumn {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 </style>
