@@ -1,26 +1,27 @@
-<template>
-  <div>
+<template class="signupmain">
+  <div class="container">
     <Header></Header>
+    <Signup></Signup>
   </div>
-  <!-- signup page stuff here--> 
-  <div>
-    <Footer></Footer>
-  </div>
+  <Footer></Footer>
 </template>
 
 <script>
-// @ is an alias to /src
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
+import Signup from '@/components/SignUp.vue'
 
 export default {
   name: 'signup',
   components: {
-    Header, Footer
-  }
+    Header, Signup, Footer
+  },
 }
 </script>
 
 <style scoped>
-
+  .container {
+    height: 100vh;
+    margin: 0px;
+  }
 </style>
