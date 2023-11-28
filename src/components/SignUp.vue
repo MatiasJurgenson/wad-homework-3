@@ -98,6 +98,7 @@ label {
     padding: 5px 5px 20px 5px;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0);
     transition: box-shadow 0.4s ease, transform 0.3s ease;
+    color: var(--dark-text);
 }
 
 .signup:hover {

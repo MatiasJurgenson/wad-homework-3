@@ -27,6 +27,6 @@ export default {
     .footer {
       position: relative;
       padding-bottom: 10vh;
-    }    
+    }
   }
 </style>
