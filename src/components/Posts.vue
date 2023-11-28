@@ -12,7 +12,7 @@
             <p> {{ post.text }} </p>
             <span> Likes: {{post.likes}} </span>
             <a>
-                <img class="logoimage" src="@/assets/thumbs-up.png" v-on:click="IncreaseLike(post.id)">
+                <img class="logoimage" src="@/assets/thumbs-up.png" :class="{ 'liked': isLiked}" v-on:click="IncreaseLike(post.id)">
             </a>
         </div>
     </div>
@@ -34,12 +34,22 @@ computed: {
 
 
 },
+data() {
+    return {
+        isLiked: false,
+    };
+},
 methods: {
   IncreaseLike: function (id) {
     console.log("method")
     console.log(id)
     //this.$store.dispatch("TestAct")
+    this.isLiked = !this.isLiked;
     this.$store.dispatch("IncreaseLikeAct", id)
+
+    setTimeout(() => {
+        this.isLiked = !this.isLiked;
+    }, 200);
   }, 
 
   IncreaseLike2: function () {
@@ -48,6 +58,7 @@ methods: {
   }
 }
 }
+
 </script>
 
 <style scoped>
@@ -100,5 +111,14 @@ a + span  {
 .logoimage {
     width: 50px;
     height: 50px;
+    cursor: pointer;
+    size: 100%;
+    transition: transform 0.3s ease;
 }
+
+.liked {
+    transform: scale(1.2);
+    transition: transform 0.2s ease;
+}
+
 </style>
