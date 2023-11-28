@@ -6,6 +6,7 @@
         <div class="sides"></div>
 
           <Posts></Posts>
+           <!-- <button v-on:click="IncreaseLike"> Increase price </button> -->
 
         <div class="sides"></div>
     </section>
@@ -19,13 +20,19 @@
 import Header from '@/components/Header.vue'
 import Posts from '@/components/Posts.vue'
 import Footer from '@/components/Footer.vue'
+import store from '@/store'
 
 export default {
   name: 'Main',
   components: {
     Header, Posts, Footer
-  }
+  },
+  methods:{
+
 }
+}
+
+
 </script>
 
 <style scoped>

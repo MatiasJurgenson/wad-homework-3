@@ -20,8 +20,23 @@ export default createStore({
   getters: {
   },
   mutations: {
+    IncreaseLikeMut: (state, postId) => {
+      console.log("mutation")
+      const post = state.Posts.find(p => p.id === postId)
+      if (post) {
+        post.likes += 1;
+      }
+    }
   },
   actions: {
+    IncreaseLikeAct: (act, postId) => {
+      console.log("act")
+      console.log(postId)
+      
+      setTimeout(function() {
+        act.commit("IncreaseLikeMut", postId)
+      }, 1000)
+    }
   },
   modules: {
   }

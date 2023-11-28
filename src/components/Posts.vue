@@ -12,7 +12,7 @@
             <p> {{ post.text }} </p>
             <span> Likes: {{post.likes}} </span>
             <a>
-                <img class="logoimage" src="@/assets/thumbs-up.png">
+                <img class="logoimage" src="@/assets/thumbs-up.png" v-on:click="IncreaseLike(post.id)">
             </a>
         </div>
     </div>
@@ -21,11 +21,25 @@
 <script>
 export default {
     name: "Posts",
+    props: {
+    post: {
+        type: Object,
+    },
+},
 
 computed: {
     posts () {
         return this.$store.state.Posts
     }
+
+
+},
+methods: {
+  IncreaseLike: (postID) => {
+    console.log("method")
+    console.log(postID)
+    this.$store.dispatch("IncreaseLikeAct", postID)
+  }
 }
 }
 </script>
