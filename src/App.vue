@@ -33,7 +33,7 @@ body {
     padding:0;
     padding-top: 65px;
     background-color: var(--secondary-color);
-    color: var(--dark-text);
+    color: var(--light-text);
 }
 
 ul {
