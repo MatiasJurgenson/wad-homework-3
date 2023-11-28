@@ -1,8 +1,8 @@
 <template>
-    <div id= "mid">
+    <div id="mid">
         <div class="post" v-for="post in posts" :key="post.id">
             <div class="pfptext">
-                <a class="logopost"> 
+                <a class="logopost">
                     <img class="logoimage" src="@/assets/pfp.png">
                 </a>
 
@@ -12,7 +12,7 @@
             <p> {{ post.text }} </p>
             <span> Likes: {{post.likes}} </span>
             <a>
-                <img class="logoimage" src="@/assets/thumbs-up.png" :class="{ 'liked': isLiked}" v-on:click="IncreaseLike(post.id)">
+                <img class="logoimage" src="@/assets/thumbs-up.png" v-on:click="IncreaseLike(post.id)">
             </a>
         </div>
     </div>
@@ -44,12 +44,7 @@ methods: {
     console.log("method")
     console.log(id)
     //this.$store.dispatch("TestAct")
-    this.isLiked = !this.isLiked;
     this.$store.dispatch("IncreaseLikeAct", id)
-
-    setTimeout(() => {
-        this.isLiked = !this.isLiked;
-    }, 200);
   }, 
 
   IncreaseLike2: function () {
@@ -116,9 +111,6 @@ a + span  {
     transition: transform 0.3s ease;
 }
 
-.liked {
-    transform: scale(1.2);
-    transition: transform 0.2s ease;
-}
+
 
 </style>
